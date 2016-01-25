@@ -6,16 +6,16 @@
 //  Copyright © 2016年 qingyun. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "FirstViewController.h"
 #import "WFModel.h"
 #import "WFTableViewCell.h"
 #import "WFSectionHeaderView.h"
-@interface ViewController () <UITableViewDataSource,UITableViewDelegate>
+@interface FirstViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong)NSArray *datas;
 @end
 
-@implementation ViewController
+@implementation FirstViewController
 static NSString *secondIdentifier = @"cell2";
 -(NSArray *)datas{
     if (_datas == nil) {
@@ -33,8 +33,8 @@ static NSString *secondIdentifier = @"cell2";
 - (void)viewDidLoad {
     [super viewDidLoad];
     //设置数据源和代理
-    _tableView.dataSource = self;
-    _tableView.delegate = self;
+    //_tableView.dataSource = self;
+    // _tableView.delegate = self;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.showsVerticalScrollIndicator = NO;
     //注册
